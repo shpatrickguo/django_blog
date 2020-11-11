@@ -20,13 +20,13 @@ pip install django-widget-tweaks
 ```
 Tweak the form field rendering in templates, not in python-level form definitions. Altering CSS classes and HTML attributes is supported.
 
-Pillow[https://pillow.readthedocs.io/en/stable/installation.html]
+[Pillow](https://pillow.readthedocs.io/en/stable/installation.html)
 ```bash
 pip install pillow
 ```
 Pillow is a library for working with images within Python
 
-Django admin CKEditor integration[https://pypi.org/project/django-ckeditor/]
+[Django admin CKEditor integration](https://pypi.org/project/django-ckeditor/)
 ```bash
 pip install django-ckeditor
 ```

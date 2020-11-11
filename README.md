@@ -12,10 +12,10 @@ Codemy.com [https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1k
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install.
 ```bash
 pip install django
-``
+```
 
-Widget-tweaks[https://pypi.org/project/django-widget-tweaks/]
-``bash
+[Widget-tweaks](https://pypi.org/project/django-widget-tweaks/)
+```bash
 pip install django-widget-tweaks
 ```
 Tweak the form field rendering in templates, not in python-level form definitions. Altering CSS classes and HTML attributes is supported.

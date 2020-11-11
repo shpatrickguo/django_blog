@@ -7,5 +7,5 @@ class HomeView(ListView):
     template_name = 'home.html'
 
 class ArticleDetailView(DetailView):
-    model = post
+    model = Post
     template_name = 'article_details.html'

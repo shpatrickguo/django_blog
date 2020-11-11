@@ -1,27 +1,8 @@
 from django.urls import path
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-from .views import Home
+from .views import HomeView, ArticleDetailView
 
 urlpatterns = [
-    path('', Home,as_view(), name="home"),
-=======
-from . import views
+    path('', HomeView.as_view(), name="home"),
+    path('article/<int:pk>', ArticleDetailView.as_view(), name="article-detail"),
 
-urlpatterns = [
-    path('', views.home, name="home")
->>>>>>> parent of 01ff698... 2
-=======
-from . import views
-
-urlpatterns = [
-    path('', views.home, name="home")
->>>>>>> parent of 01ff698... 2
-=======
-from .views import HomeView
-
-urlpatterns = [
-    path('', HomeView,as_view(), name="home"),
->>>>>>> parent of 471f4b3... homeview
 ]

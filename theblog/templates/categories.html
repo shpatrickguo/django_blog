@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Posts</h1>
 
-<ul>
-{% for post in object_list %}
+{% if category_posts %}
+  <h1> {{cats}} </h1>
+
+  <ul>
+  {{% for post in cateogry_posts %}}
   <li><a href="{% url 'article-detail' post.pk %}">{{ post.title}}</a>
-    - <a href="{% url 'category' post.category %}">{{ post.cateogry}}</a>
+    - {{ post.cateogry}}
     - {{ post.author.first_name }} {{ post.author.last_name }}
     - {{ post.post_date }} -
   <small>
@@ -15,7 +17,10 @@
     {% endif %}
   </small><br/>
   {{ post.body | slice:":200" | safe}} </li>
-{% endfor %}
-</ul>
+  {{% endfor %}}
+  </ul>
+{% else %}
+Sorry this page does not exist.
+{% endif %}
 
 {% endblock %}

@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
-{% block title %}Whisper a secret{% endblock %}
+{% block title %}Create a New Blog Post{% endblock %}
 {% block content %}
-<h1>Add Post</h1>
-<br/><br/>
-<div class="form-group">
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="btn btn-secondary">Post</button>
-</div>
+{% if user.is_authenticated %}
+  <h1>Add Post</h1>
+  <br/><br/>
+  <div class="form-group">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-secondary">Post</button>
+  </div>
+{% else %}
+You need to be logged in to add a post.
+
+{% endif %}
 
 {% endblock %}

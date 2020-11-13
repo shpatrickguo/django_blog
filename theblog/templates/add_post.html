@@ -10,9 +10,13 @@
       {{ form.as_p }}
       <button class="btn btn-secondary">Post</button>
   </div>
+
+  <script>
+    var name = "{{ user.id }}";
+    document.getElementById("").value = name;
+  </script>
+  
 {% else %}
 You need to be logged in to add a post.
-
 {% endif %}
-
 {% endblock %}

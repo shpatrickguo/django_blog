@@ -3,7 +3,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Post, Category
 from .forms import PostForm, EditForm
 from django.urls import reverse_lazy, reverse
-import django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect
 
 def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
@@ -44,14 +44,15 @@ def CategoryListView(request):
 class ArticleDetailView(DetailView):
     model = Post
     template_name = 'article_details.html'
-    stuff = get_object_or_404(Post, id=self.kwards['pk'])
-    total_likes = stuff.total_likes()
-    liked = False
-    if stuff.likes.filter(id=self.request.user.id).exists():
-        liked = True
+
     def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
         context = super(ArticleDetailView, self).get_context_data(*args, **kwargs)
+        stuff = get_object_or_404(Post, id=self.kwargs['pk'])
+        total_likes = stuff.total_likes()
+        liked = False
+        if stuff.likes.filter(id=self.request.user.id).exists():
+            liked = True
         context["cat_menu"] = cat_menu
         context["total_likes"] = total_likes
         context["liked"] = liked

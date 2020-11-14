@@ -11,26 +11,30 @@
     <a href="{% url 'delete_post' post.pk %}">(Delete)<a>
     {% endif %}
   {% endif %}
-</small><br/>
-<hr>
-<br/>
-{{ post.body|safe }}
-<br/><br/>
-<a href="{% url 'home'%}" class="btn btn-secondary">Back</a>
-<br/><br/>
-<hr>
-<br/>
-{% if user.is_authenticated %}
-<form action="{% url 'like_post' post.pk %}" method="POST">
-  {% csrf_token %}
-  {% if liked %}
-    <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-sm">=Unike</button>
-  {% else %}
-    <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">Like</button>
+  </small><br/>
+  <hr>
+  <br/>
+  {% if post.header_image %}
+  < img src = "{{ post.header_image.url }}">
   {% endif %}
-{% else %}
-<small><a href="{% url 'login' %}">Login</a> to Like</small>
-{% endif %}
-    - {{ total_likes }} Likes
-</form>
+  <br/><br/>
+  {{ post.body|safe }}
+  <br/><br/>
+  <a href="{% url 'home'%}" class="btn btn-secondary">Back</a>
+  <br/><br/>
+  <hr>
+  <br/>
+  {% if user.is_authenticated %}
+  <form action="{% url 'like_post' post.pk %}" method="POST">
+    {% csrf_token %}
+    {% if liked %}
+      <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-sm">=Unike</button>
+    {% else %}
+      <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">Like</button>
+    {% endif %}
+  {% else %}
+  <small><a href="{% url 'login' %}">Login</a> to Like</small>
+  {% endif %}
+      - {{ total_likes }} Likes
+  </form>
 {% endblock %}

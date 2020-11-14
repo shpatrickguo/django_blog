@@ -6,7 +6,7 @@
     <h1>Update Post</h1>
     <br/><br/>
     <div class="form-group">
-      <form method="post">
+      <form method="POST">
         {% csrf_token %}
         {{ form.media }}
         {{ form.as_p }}

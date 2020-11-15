@@ -10,7 +10,7 @@ from theblog.models import Profile
 class CreateProfilePageView(generic.CreateView):
     model = Profile
     form_class = ProfilePageForm
-    template = 'registraion/create_user_profile_page.html'
+    template = 'registration/create_user_profile_page.html'
     fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'linkedin_url']
 
     def form_valid(self, form):

@@ -5,7 +5,7 @@
   <ul>
   {% for post in category_posts %}
   <li><a href="{% url 'article-detail' post.pk %}">{{ post.title}}</a>
-    - {{ post.cateogry}}
+    - {{ post.category}}
     - {{ post.author.first_name }} {{ post.author.last_name }}
     - {{ post.post_date }} -
   <small>

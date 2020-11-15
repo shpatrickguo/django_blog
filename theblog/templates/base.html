@@ -45,7 +45,7 @@
           <a class="nav-link" href="{% url 'add_post' %}">Add Post</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="{% url 'add_category' %}">Add Cateogry</a>
+          <a class="nav-link" href="{% url 'add_category' %}">Add Category</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,7 +54,11 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Profile Page</a>
               <div class="dropdown-divider"></div>
+              {% if user.profile.id %}
               <a class="dropdown-item" href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile Page</a>
+              {% else %}
+              <a class="dropdown-item" href="{% url 'create_profile_page' %}">Create Profile Page</a>
+              {% endif %}
               <a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Settings</a>
             </div>
           </li>

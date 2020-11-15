@@ -21,15 +21,13 @@
   <br/><br/>
   {{ post.body|safe }}
   <br/><br/>
-  <a href="{% url 'home'%}" class="btn btn-secondary">Back</a>
-  <br/><br/>
   <hr>
   <br/>
   {% if user.is_authenticated %}
   <form action="{% url 'like_post' post.pk %}" method="POST">
     {% csrf_token %}
     {% if liked %}
-      <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-sm">=Unike</button>
+      <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-sm">Unike</button>
     {% else %}
       <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">Like</button>
     {% endif %}
@@ -38,15 +36,14 @@
   {% endif %}
       - {{ total_likes }} Likes
   </form>
-  <br/><br/>
-
+  <br/>
   <div class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
       <div class="col-md-2">
         {% if post.author.profile.profile_pic %}
-        <img src="{{ post.author.profile.profile_pic.url }}" class="card-img">
+        <img src="{{ page_user_pic.url }}" class="card-img">
         {% else %}
-         <img src="{% static 'theblog/images/default_profile_pic.jpg'%}" class="card-img">
+        <img src="{% static 'theblog/images/default_profile_pic.jpg'%}" class="card-img">
         {% endif %}
       </div>
       <div class="col-md-10">
@@ -77,4 +74,20 @@
       </div>
     </div>
   </div>
+  <br/>
+  <h1>Comments</h1><br/>
+  {% if not post.comments.all %}
+    No Comments Yet... <a href="{% url 'add_comment' post.pk %}">Add One</a>
+  {% else %}
+    <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
+    <br/><br/>
+    {% for comment in post.comments.all %}
+      <strong> {{ comment.name }} - {{ comment.date_added }} </strong>
+      <br/>
+      {{ comment.body }}
+      <br/><br/>
+    {% endfor %}
+  {% endif %}
+  <br/><br/>
+
 {% endblock %}

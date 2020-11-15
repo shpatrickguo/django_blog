@@ -4,8 +4,18 @@ from django.views.generic import DetailView
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
-from .forms import SignUpForm, EditProfileForm, PasswordChangingForm
+from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfilePageForm
 from theblog.models import Profile
+
+class CreateProfilePageView(generic.CreateView):
+    model = Profile
+    form_class = ProfilePageForm
+    template = 'registraion/create_user_profile_page.html'
+    fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'linkedin_url']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 class EditProfilePageView(generic.UpdateView):
     model = Profile

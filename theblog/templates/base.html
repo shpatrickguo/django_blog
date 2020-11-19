@@ -63,9 +63,9 @@
             {{ user.first_name }} {{ user.last_name }}
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            {% if user.profile.id %}
             <a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Profile Page</a>
             <div class="dropdown-divider"></div>
-            {% if user.profile.id %}
             <a class="dropdown-item" href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile Page</a>
             {% else %}
             <a class="dropdown-item" href="{% url 'create_profile_page' %}">Create Profile Page</a>

@@ -7,17 +7,20 @@ Following the guidelines from
 Django documentation[https://docs.djangoproject.com/en/3.1/intro/tutorial01/]
 Codemy.com [https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com]
 
+## Functions
+1. Post a blog entry with:
+Title, title_tag, category, body, snippet
+2. Add Categories
+3. Navbar with dropdowns
+4. User registration
+5. User authentication: limits access to authenticated users
+
+
 ## Installations
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install.
 ```bash
 pip install django
 ```
-
-[Widget-tweaks](https://pypi.org/project/django-widget-tweaks/)
-```bash
-pip install django-widget-tweaks
-```
-Tweak the form field rendering in templates, not in python-level form definitions. Altering CSS classes and HTML attributes is supported.
 
 [Pillow](https://pillow.readthedocs.io/en/stable/installation.html)
 ```bash

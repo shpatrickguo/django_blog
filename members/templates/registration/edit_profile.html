@@ -6,7 +6,7 @@
 {{ user.profile.bio }}
 <br/><br/>
 <div class="form-group">
-  <form method="post">
+  <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <button class="btn btn-secondary">Update Setttings</button>

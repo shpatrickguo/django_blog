@@ -27,5 +27,7 @@ urlpatterns = [
     path('members/', include('django.contrib.auth.urls')),
     path('members/', include('members.urls')),
 
-    path('website', include('website.urls')),
+    path('website/', include('website.urls')),
+
+    path('csvs/', incldue('csvs.urls', namespace='csvs'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -5,15 +5,10 @@ Run through of django processes in order to familiarize oneself with the ins and
 
 Following the guidelines from
 Django documentation[https://docs.djangoproject.com/en/3.1/intro/tutorial01/]
-Codemy.com [https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com]
 
-## Functions
-1. Post a blog entry with:
-Title, title_tag, category, body, snippet
-2. Add Categories
-3. Navbar with dropdowns
-4. User registration
-5. User authentication: limits access to authenticated users
+Codemy.com [https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com]
+Pyplane[https://www.youtube.com/watch?v=t3BdM6JlAmY&ab_channel=Pyplane]
+
 
 
 ## Installations

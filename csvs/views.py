@@ -1,8 +1,8 @@
+import csv
 from django.shortcuts import render
+from django.contrib.auth.models import User
 from .forms import CsvModelForm
 from .models import Csv
-import csv
-from django.contrib.auth.models import User
 from sales.models import Sale
 
 def upload_file_view(request):
@@ -26,7 +26,7 @@ def upload_file_view(request):
                     Sale.objects.create(
                         product = product,
                         quantity = int(row[2]),
-                        salesman = user, 
+                        salesman = user,
                     )
             obj.activated = True
             obj.save()

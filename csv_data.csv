@@ -1,7 +1,7 @@
-Unnamed: 0,Route,Inbound,Outbound,Classification,Frequency,Notes
-[A],DASH A,LA Live,Arts District,Bidirectional,7-15 mins,via Little Tokyo
-[B],DASH B,Staples Center,Lincoln Heights,Bidirectional,7-15 mins,via Chinatown
-[C],DASH C,City West,Civic Center,Bidirectional,7-15 mins,
-[D],DASH D,Union Station,South Park/LATTC,Bidirectional,7-15 mins,
-[E],DASH E,Westlake/MacArthur Park,Trinity/Washington,Bidirectional,7-15 mins,via Fashion District
-[F],DASH F,Expo Park/USC,Union Station,Bidirectional,7-15 mins,via Arts District
+Year,Ridership
+2019,0
+2018,18394160
+2017,19734177
+2016,21536305
+2015,23895017
+2014,25584956

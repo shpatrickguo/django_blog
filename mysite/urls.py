@@ -29,5 +29,5 @@ urlpatterns = [
 
     path('website/', include('website.urls')),
 
-    path('csvs/', include('csvs.urls', namespace='csvs'))
+    path('csvs/', include('csvs.urls', namespace="csvs")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

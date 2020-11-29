@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-*">
+</head>
+
+<body>
+    <div class="container">
+    <h1>Upload Data</h1>
+    <form enctype="multipart/form-data" method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">
+            Submit
+        </button>
+    </form>
+    </div>
+</body>
+</html>

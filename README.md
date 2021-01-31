@@ -1,7 +1,8 @@
-#django_blog
+# django_sandbox
 
 ## About the project
-Run through of django processes in order to familiarize oneself with the ins and outs.
+Testing and running through of django processes in order to familiarize oneself with the ins and outs.
+A lot of django librarier are installed for testing.
 
 Following the guidelines from
 Django documentation[https://docs.djangoproject.com/en/3.1/intro/tutorial01/]

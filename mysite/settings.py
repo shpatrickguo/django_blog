@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'theblog',
     'members',
+    'plotly_home',
     'csvs',
     'sales',
     'ckeditor',

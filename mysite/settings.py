@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'plotly_home',
     'csvs',
     'sales',
+    'guardian',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend', # default
+    'guardian.backends.ObjectPermissionBackend',
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

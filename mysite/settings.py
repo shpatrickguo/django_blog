@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'plotly_home',
     'csvs',
     'sales',
+    'security',
     'guardian',
 ]
 

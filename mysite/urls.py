@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('plotly_dash/', include('plotly_home.urls')),
+    path('security/', include('security.urls')),
 
     path('polls/', include('polls.urls')),
     path('blog/', include('blog.urls')),

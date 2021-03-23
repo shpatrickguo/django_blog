@@ -5,8 +5,8 @@ Testing and running through of django processes in order to familiarize oneself 
 A lot of django librarier are installed for testing.
 
 Largely adapted from:
-= [Pip Install Python](https://www.youtube.com/watch?v=psvU4zwO3Ao&ab_channel=PipInstallPython)
-= [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com)
+- [Pip Install Python](https://www.youtube.com/watch?v=psvU4zwO3Ao&ab_channel=PipInstallPython)
+- [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com)
 - [Pyplane](https://www.youtube.com/watch?v=t3BdM6JlAmY&ab_channel=Pyplane)
 
 ## Project Status

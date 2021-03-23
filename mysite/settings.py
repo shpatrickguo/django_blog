@@ -32,23 +32,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls.apps.PollsConfig',
     'theblog',
     'members',
     'plotly_home',
     'csvs',
     'sales',
-    'ckeditor',
-    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
-    'channels',
-    'channels_redis',
 ]
 
 MIDDLEWARE = [
@@ -148,4 +143,4 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-ASGI_APPLICATION = 'mysite'
+#ASGI_APPLICATION = 'mysite'

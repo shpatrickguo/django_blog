@@ -19,13 +19,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-     path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('plotly_dash/', include('plotly_home.urls')),
 
     path('polls/', include('polls.urls')),
     path('blog/', include('blog.urls')),
 
-   
     path('', include('theblog.urls')),
     path('members/', include('django.contrib.auth.urls')),
     path('members/', include('members.urls')),

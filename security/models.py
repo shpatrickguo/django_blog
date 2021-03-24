@@ -18,16 +18,3 @@ class TwoFactorAuthentification(models.Model):
     @classmethod
     def send_code(cls, user, to_phone):
         account_sid = "AC5a082b2b57a8b32da3373225b7a80677"
-        auth_token = "7abe16cc9db1fe30b760369bb845ae14"
-        client = Client(account_sid, auth_token)
-        digits = "0123456789"
-        code = ''.join([choice(digits) for i in range(6)])
-        cls.objects.create(
-            user=user,
-            code=code,
-        )
-        message = client.messages.create(
-            to=to_phone,
-            from="+12813695268",
-            body="Your auth code:" + code
-        )
